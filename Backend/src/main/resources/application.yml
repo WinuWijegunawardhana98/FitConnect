@@ -1,0 +1,28 @@
+access-token:
+  private: ${ACCESS_TOKEN_PRIVATE_KEY_PATH}
+  public: ${ACCESS_TOKEN_PUBLIC_KEY_PATH}
+refresh-token:
+  private: ${REFRESH_TOKEN_PRIVATE_KEY_PATH}
+  public: ${REFRESH_TOKEN_PUBLIC_KEY_PATH}
+spring:
+  application:
+    name: PafBackend
+  profiles:
+    active: dev
+  data:
+    mongodb:
+      uri: mongodb+srv://paf28:paf28@cluster0.gjpikoa.mongodb.net/
+      database: ${MONGODB_DB}
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: 2d1f87954acef68fba3c
+            client-secret: 5ebedc8034a5aa712df5e4627d2f6c3f027987f8
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+
+
